@@ -134,37 +134,25 @@
         </div>
         <div id='about' class='holder not-active'>
             <h3 id='aboutH'>About Me:</h3>
-            <p id='aboutP'>I am a 25 year old father of one.  I taught myself how to develop websites, and web applications using a combination of w3schools, and codecademy.  I learned the basics of coding while I was still in high school using <i>C++ for Dummies</i>.  I went on and learned other languages, and was taught python while at UMO.  I am a very motivated learner, and love to face new challenges.  These days I like to learn about Angular.js and SPA design.</p>
+            <p id='aboutP'>I am a 25 year old father of one.  I taught myself how to develop websites using a combination of w3schools, and codecademy.  I learned the basics of coding while I was still in high school using <i>C++ for Dummies</i>.  I went on and learned other languages, and was taught python while at UMO.  I am a very motivated learner, and love to face new challenges.  These days I like to learn about Angular.js and SPA design.</p>
             <button class='back-btn' onclick='backFn(0)'>Back</button>
         </div>
         <div id='skills' class='holder not-active'>
             <h3 id='skillsH'>Skills:</h3>
             <ul id='skillsUL'>
                 <li class='skills-li'>HTML5</li>
-				       <div class='skill-div not-active'><p><code><p>This whole thing would have been really hard to do if I 
-				       didn't know HTML.</p></code></p></div>
+				       <div class='skill-div not-active'><p></p></div>
                 <li class='skills-li'>CSS3</li>
 				       <div class='skill-div not-active'></div>
                 <li class='skills-li'>Javascript</li>
-				       <div class='skill-div not-active'><p><code>var thisDiv = document.getElementById('thisDiv');
-				       thisDiv.innerHTML = "seriously I know how to code in Javascript!";</code></p></div>
+				       <div class='skill-div not-active'></div>
                 <li class='skills-li'>PHP</li>
-				       <div class='skill-div not-active'><p><code><?php echo "php is no sweat"; ?></code></p></div>
+				       <div class='skill-div not-active'></div>
                 <li class='skills-li'>Responsive Design</li>
-				       <div class='skill-div not-active'><p>Interestingly this is responsively designed. With a Single Page Application design in mind.</p></div>
+				       <div class='skill-div not-active'><p>Interestingly this is responsively designed.</p></div>
                 <li class='skills-li'>Java</li>
-				       <div class='skill-div not-active'><p><code>import java.io;
-				       public class MyJavaClass{
-				           public String JavaFn(){
-				               String MyString = new String("first languages!");
-				               println("Java was one of my" + MyString);
-				               return "It's not even that hard to use.";
-				               }
-				           public int main(){
-				               JavaFn();}
-				               }</code></p></div>
+				       <div class='skill-div not-active'></div>
                 <li class='skills-li'>Python</li>
-                	<div class='skill-div not-active'><p>I would write out python code like I did for the others, but that seems like a practice in absurdity.</p></div>
             </ul>
             <button class='back-btn' onclick='backFn(0)'>Back</button>
         </div>
@@ -196,10 +184,9 @@
             <button class='back-btn' onclick='backFn(0)'>Back</button>    
         </div>
         <div id='school' class='holder not-active'>
-            <p id='schoolP1' class='school-p'><b>University of Maine Orono:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            Years: 2010-2011<br>Major: Computer Science</p>
-            <p id='schoolP2' class='school-p'><b>Southern Maine Community College:</b>&nbsp;&nbsp;Years: 2008-2010,2012,2015<br>
-            Major: Liberal Studies&nbsp;&nbsp;&nbsp;&nbsp;Graduation: Spring 2016</p>
+            <p id='schoolP1' class='school-p'><b>University of Southern Maine</b></p>
+            <p id='schoolP2' class='school-p'><b>University of Maine Orono</b></p>
+            <p id='schoolP3' class='school-p'><b>Southern Maine Community College</b></p>
             <button class='back-btn main-nav' onclick='backFn(0)'>Back</button>
         </div>
 		
