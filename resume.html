@@ -1,0 +1,247 @@
+<!Doctype html>
+<html>
+    <!--Coded this from scratch to show I do know what I'm doing -->
+	<!--Note: I could have done this with an angular.js, or bootstrap, or jquery CDN but using only the DOM 
+	somehow seemed more impressive.-->
+    <head>
+        <title>Zachary MacKeil: Self taught web developer</title>
+        <meta author='Zachary MacKeil'>
+        <!-- Css has been the hardest of the big three for me to learn-->
+        <style>
+        		* {
+					margin: 0;
+					padding: 0;
+					border: 0; 
+					font: Helvetica;
+        		}
+        		.header {
+					border-bottom: 1px solid black;
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					height: 5vh;
+					width: 100vw;
+					background: linear-gradient(to bottom right, #333333 , white);
+					background: -webkit-linear-gradient(to bottom right, #333333 , white);
+					background: -ms-linear-gradient(to bottom right, #333333 , white);
+					background: -moz-linear-gradient(to bottom right, #333333 , white);
+					background: -o-linear-gradient(to bottom right, #333333 , white);        		
+        		}
+				#title {
+					font: Helvetica;
+					position: relative;
+					left: 20vw;
+					
+				}
+				.holder {
+					position: relative;
+					height: 80vh;
+					width: 98%;
+					border: 2px solid black;
+					top: 7vh;
+					left: 1%;
+					background: linear-gradient(to bottom right, white , #999999);
+					background: -webkit-linear-gradient(to bottom right, white , #999999);
+					background: -ms-linear-gradient(to bottom right, white , #999999);
+					background: -moz-linear-gradient(to bottom right, white , #999999);
+					background: -o-linear-gradient(to bottom right, white , #999999); 
+				}
+				.main-nav {
+					display: inline-block;
+					position: relative;
+					height: 25%;
+					width: 30%;
+					left: 10%;
+					background: black;
+					font: Helvetica;
+					font-size: 3em;
+					color: white;
+					margin: 5%;
+					border-radius: 20%;
+				}				
+				.main-nav:hover{
+					background: white;
+					color: black;
+				}
+				#school-btn.main-nav{
+					top: -5%;		
+				}
+				.back-btn{
+					display: block;
+					position: absolute;
+					height: 30%;
+					width: 30%;
+					left: 50%;
+					top:  50%;
+					background: black;
+					font: Helvetica;
+					font-size: 3em;
+					color: white;
+					margin: 5%;
+					border-radius: 20%;
+				}
+				.back-btn:hover{
+               background-color: white;
+               color: black;				
+				}
+				.not-active {
+					display: none;
+				}
+				.vsource {
+					position: relative;
+					top: 15vh;
+					left: 20vw;
+					font: Helvetica;
+				}
+				#skillsH{
+				   position: absolute;
+				   top: 10%;
+               left: 20%;
+               font-size: 120%;				
+				}
+				#skillsUL{
+               position: absolute;
+               left: 30%;
+               top: 20%;				
+				}
+				.skills-li{
+					position: relative;
+					margin: 10%;				
+				}
+				#jobsH{
+				   position: relative;
+				   left: 30%;
+				}
+				.a-job{
+               position: relative;
+               margin: 1%;
+               display: inline-block;				
+				}
+				
+        </style>
+        <!--Wish I could put some php in here...  What if I told you I knew php stood for php: hypertext preprocessing language? -->
+    </head>
+    <body onload='myAge()'>
+        <a name='home'></a>
+        <div class='header'>
+            <h1 id='title'>Zachary MacKeil: Self Taught Web Developer</h1>
+        </div>
+        <div id='main' class='holder'>
+            <button class='main-nav' id='about-btn' onclick='aboutFn()'>About Me</button>
+            <button class='main-nav' id='skills-btn' onclick='skillsFn()'>Skills</button>
+            <button class='main-nav' id='jobs-btn' onclick='jobsFn()'>Employment History</button>
+            <button class='main-nav' id='school-btn' onclick='schoolFn()'>Past Schooling</button>
+        </div>
+        <div id='about' class='holder not-active'>
+            <h3 id='aboutH'>About Me:</h3>
+            <p id='aboutP'>I am a 25 year old father of one.  I taught myself how to develop websites using a combination of w3schools, and codecademy.  I learned the basics of coding while I was still in high school using <i>C++ for Dummies</i>.  I went on and learned other languages, and was taught python while at UMO.  I am a very motivated learner, and love to face new challenges.  These days I like to learn about Angular.js and SPA design.</p>
+            <button class='back-btn' onclick='backFn(0)'>Back</button>
+        </div>
+        <div id='skills' class='holder not-active'>
+            <h3 id='skillsH'>Skills:</h3>
+            <ul id='skillsUL'>
+                <li class='skills-li'>HTML5</li>
+				       <div class='skill-div not-active'><p></p></div>
+                <li class='skills-li'>CSS3</li>
+				       <div class='skill-div not-active'></div>
+                <li class='skills-li'>Javascript</li>
+				       <div class='skill-div not-active'></div>
+                <li class='skills-li'>PHP</li>
+				       <div class='skill-div not-active'></div>
+                <li class='skills-li'>Responsive Design</li>
+				       <div class='skill-div not-active'><p>Interestingly this is responsively designed.</p></div>
+                <li class='skills-li'>Java</li>
+				       <div class='skill-div not-active'></div>
+                <li class='skills-li'>Python</li>
+            </ul>
+            <button class='back-btn' onclick='backFn(0)'>Back</button>
+        </div>
+        <div id='jobs' class='holder not-active'>
+            <h3 id='jobsH'>Employment History:</h3>
+            <h4 id='present'>Present Employers:</h4>
+            <div class="a-job">
+                <p id='jobsP1' class='jobs-p'><b>Maine Army National Guard</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6/2013-present<br>
+                Horizontal Constuction Specialist<br><b>Duties:</b> Operation of heavy equipment, Cleaning of drill area, Maintaining warrior tasks and drills.
+                </p>
+            </div>
+            <div class="a-job">
+                <p id='jobsP2' class='jobs-p'><b>North East Mobile Health Services</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5/2014-present<br>
+                EMT<br><b>Duties:</b>  Safe care and transport of sick and wounded patients.</p>
+            </div>
+            <h4 id='past'>Past Employers:</h4>
+            <div class="a-job">
+                <p id='jobsP3' class='jobs-p'><b>Inland Technologies</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12/2012-10/2013<br>
+                Equipment Operator<br><b>Duties:</b> Ensure continued productivity of distillation equipment.</p>
+            </div>    
+            <div class="a-job">
+                <p id='jobsP4' class='jobs-p'><b>Red Robin</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3/2012-1/2013<br>
+                Server<br><b>Duties:</b> Ensure guest satisfaction, Clean service area.</p>
+            </div>
+            <div class="a-job">                
+                <p id='jobsP5' class='jobs-p'><b>Wendy's</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9/2011-3/2012<br>
+                Team Member<br><b>Duties:</b> Taking customer orders, Cleaning restaurant, Running cash register.</p>
+            </div>
+            <button class='back-btn' onclick='backFn(0)'>Back</button>    
+        </div>
+        <div id='school' class='holder not-active'>
+            <p id='schoolP1' class='school-p'><b>University of Southern Maine</b></p>
+            <p id='schoolP2' class='school-p'><b>University of Maine Orono</b></p>
+            <p id='schoolP3' class='school-p'><b>Southern Maine Community College</b></p>
+            <button class='back-btn main-nav' onclick='backFn(0)'>Back</button>
+        </div>
+		
+		<span class='vsource'><b>Still not convinced?  Try</b> <a id='avsource'>viewing the source!</a></span>
+        <script type='text/javascript'>
+            // a little javascript to liven up this page
+			
+			// here are some functions to create something a little more SPA like.
+			// kept all the variables local for efficiency
+			function aboutFn(){
+            var aboutDiv = document.getElementById('about');
+            var mainDiv = document.getElementById('main');
+				aboutDiv.style.display = 'block';
+				mainDiv.style.display = 'none';
+				myAge();
+			}
+			var skillsFn = function(){
+			   var skillsDiv = document.getElementById('skills');
+			   var mainDiv = document.getElementById('main');
+				skillsDiv.style.display = 'block';
+				mainDiv.style.display = 'none';
+			};
+			var jobsFn = function(){
+			   var jobsDiv = document.getElementById('jobs');
+			   var mainDiv = document.getElementById('main');
+				jobsDiv.style.display = 'block';
+				mainDiv.style.display = 'none';
+			}
+			var schoolFn = function(){
+			   var schoolDiv = document.getElementById('school');
+			   var mainDiv = document.getElementById('main');
+				schoolDiv.style.display = 'block';
+				mainDiv.style.display = 'none';
+			}
+			//I couldn't help but add a little recursion to this page 
+			var backFn = function(i){
+			   var mainDiv = document.getElementById('main');
+			   var aboutDiv = document.getElementById('about');
+			   var skillsDiv = document.getElementById('skills');
+			   var jobsDiv = document.getElementById('jobs');
+			   var schoolDiv = document.getElementById('school');
+			   // the reason for the array will become more clear real soon
+			   var divArray = [aboutDiv, skillsDiv, jobsDiv, schoolDiv];
+				//check if we meet terminating conditions
+				if(i >= 4){
+					mainDiv.style.display = '';
+					displayBtns();
+				}
+				//if we don't meet terminating conditions set one of the div's to hide
+				else if(i <= 3){
+					divArray[i].style.display = 'none';
+					i += 1;
+					backFn(i);
+				}
+			}
+        </script>
+    </body>
+</html>
