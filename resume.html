@@ -19,26 +19,30 @@
 					position: fixed;
 					top: 0px;
 					left: 0px;
-					height: 5vh;
+					height: 9vh;
 					width: 100vw;
 					background: linear-gradient(to bottom right, #333333 , white);
 					background: -webkit-linear-gradient(to bottom right, #333333 , white);
 					background: -ms-linear-gradient(to bottom right, #333333 , white);
 					background: -moz-linear-gradient(to bottom right, #333333 , white);
-					background: -o-linear-gradient(to bottom right, #333333 , white);        		
+					background: -o-linear-gradient(to bottom right, #333333 , white);
         		}
 				#title {
 					font: Helvetica;
 					position: relative;
 					left: 20vw;
-					
 				}
+                #contact {
+                    font: Helvetica;
+                    position: relative;
+                    left: 30vw;
+                }
 				.holder {
 					position: relative;
 					height: 80vh;
 					width: 98%;
 					border: 2px solid black;
-					top: 7vh;
+					top: 11vh;
 					left: 1%;
 					background: linear-gradient(to bottom right, white , #999999);
 					background: -webkit-linear-gradient(to bottom right, white , #999999);
@@ -66,6 +70,9 @@
 				#school-btn.main-nav{
 					top: -5%;		
 				}
+                #jobs-btn.main-nav{
+                    top: -10%;
+                }
 				.back-btn{
 					display: block;
 					position: absolute;
@@ -100,8 +107,8 @@
                font-size: 120%;				
 				}
 				#skillsUL{
-               position: absolute;
-               left: 30%;
+                    position: absolute;
+                    left: 30%;
                top: 20%;				
 				}
 				.skills-li{
@@ -113,18 +120,37 @@
 				   left: 30%;
 				}
 				.a-job{
-               position: relative;
-               margin: 1%;
-               display: inline-block;				
+                    position: relative;
+                    margin: 1%;
+                    display: inline-block;
+                    border: 1px solid black;
+                    background-color: white;				
 				}
+				.school-p{
+					position: relative;
+					margin: 1%;
+                    width: 40%;
+					display: block;
+					border: 2px solid black;
+					background: white;
+                    left: 25%;
+				}
+                .about-p{
+                    position: relative;
+                    margin: 1%;
+                    display: inline-block;
+                    border: 2px solid black;
+                    background: white;
+                    top: 3%;
+                }
 				
         </style>
         <!--Wish I could put some php in here...  What if I told you I knew php stood for php: hypertext preprocessing language? -->
     </head>
-    <body onload='myAge()'>
-        <a name='home'></a>
+    <body>
         <div class='header'>
             <h1 id='title'>Zachary MacKeil: Self Taught Web Developer</h1>
+            <h4 id='contact'>Phone: (207)209-7413  Email: zack.mackeil@gmail.com</h4>
         </div>
         <div id='main' class='holder'>
             <button class='main-nav' id='about-btn' onclick='aboutFn()'>About Me</button>
@@ -133,38 +159,23 @@
             <button class='main-nav' id='school-btn' onclick='schoolFn()'>Past Schooling</button>
         </div>
         <div id='about' class='holder not-active'>
-            <h3 id='aboutH'>About Me:</h3>
-            <p id='aboutP'>I am a 25 year old father of one.  I taught myself how to develop websites, and web applications using a combination of w3schools, and codecademy.  I learned the basics of coding while I was still in high school using <i>C++ for Dummies</i>.  I went on and learned other languages, and was taught python while at UMO.  I am a very motivated learner, and love to face new challenges.  These days I like to learn about Angular.js and SPA design.</p>
+            <div class='about-p'>
+                <h3 id='aboutH'>About Me:</h3>
+                <p id='aboutP'>I am a 25 year old father of one.  I taught myself how to develop websites, and web applications using a combination of w3schools, and codecademy.  I learned the basics of coding while I was still in high school using <i>C++ for Dummies</i>.  I went on and learned other languages, and was taught python while at UMO.  I am a very motivated learner, and love to face new challenges.  These days I like to learn about Angular.js and SPA design.</p>
+            </div>
             <button class='back-btn' onclick='backFn(0)'>Back</button>
         </div>
         <div id='skills' class='holder not-active'>
             <h3 id='skillsH'>Skills:</h3>
             <ul id='skillsUL'>
                 <li class='skills-li'>HTML5</li>
-				       <div class='skill-div not-active'><p><code><p>This whole thing would have been really hard to do if I 
-				       didn't know HTML.</p></code></p></div>
                 <li class='skills-li'>CSS3</li>
-				       <div class='skill-div not-active'></div>
                 <li class='skills-li'>Javascript</li>
-				       <div class='skill-div not-active'><p><code>var thisDiv = document.getElementById('thisDiv');
-				       thisDiv.innerHTML = "seriously I know how to code in Javascript!";</code></p></div>
                 <li class='skills-li'>PHP</li>
-				       <div class='skill-div not-active'><p><code><?php echo "php is no sweat"; ?></code></p></div>
                 <li class='skills-li'>Responsive Design</li>
-				       <div class='skill-div not-active'><p>Interestingly this is responsively designed. With a Single Page Application design in mind.</p></div>
                 <li class='skills-li'>Java</li>
-				       <div class='skill-div not-active'><p><code>import java.io;
-				       public class MyJavaClass{
-				           public String JavaFn(){
-				               String MyString = new String("first languages!");
-				               println("Java was one of my" + MyString);
-				               return "It's not even that hard to use.";
-				               }
-				           public int main(){
-				               JavaFn();}
-				               }</code></p></div>
                 <li class='skills-li'>Python</li>
-                	<div class='skill-div not-active'><p>I would write out python code like I did for the others, but that seems like a practice in absurdity.</p></div>
+                <li class='skills-li'>C/C++</li>
             </ul>
             <button class='back-btn' onclick='backFn(0)'>Back</button>
         </div>
@@ -196,6 +207,7 @@
             <button class='back-btn' onclick='backFn(0)'>Back</button>    
         </div>
         <div id='school' class='holder not-active'>
+        		<h3 id='schoolH'>Schools Attended:</h3>
             <p id='schoolP1' class='school-p'><b>University of Maine Orono:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Years: 2010-2011<br>Major: Computer Science</p>
             <p id='schoolP2' class='school-p'><b>Southern Maine Community College:</b>&nbsp;&nbsp;Years: 2008-2010,2012,2015<br>
@@ -203,7 +215,7 @@
             <button class='back-btn main-nav' onclick='backFn(0)'>Back</button>
         </div>
 		
-		<span class='vsource'><b>Still not convinced?  Try</b> <a id='avsource'>viewing the source!</a></span>
+		<span class='vsource'><b>Still not convinced?  Try viewing the source!</b></span>
         <script type='text/javascript'>
             // a little javascript to liven up this page
 			
